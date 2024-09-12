@@ -5,19 +5,19 @@ export default function Footer() {
     <footer className="mb-3 mt-5 flex h-16 w-full flex-col items-center justify-between space-y-3 px-3 pt-4 text-center sm:mb-0 sm:h-20 sm:flex-row sm:pt-2">
       <div>
         <div className="font-medium">
-          Built with{" "}
+          Feito com{" "}
           <a
             href="https://dub.sh/together-ai/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup"
-            className="font-semibold text-blue-600 underline-offset-4 transition hover:text-gray-700 hover:underline"
+            className="font-semibold text-Red-600 underline-offset-4 transition hover:text-Red-700 hover:underline"
           >
-            Llama 3.1 405B
+            Amor ♥
           </a>{" "}
-          and{" "}
+          por{" "}
           <a
             href="https://dub.sh/together-ai/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup"
             className="font-semibold text-blue-600 underline-offset-4 transition hover:text-gray-700 hover:underline"
           >
-            Together AI
+            Ellacoder
           </a>
           .
         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
           </svg>
         </Link>
         <Link
-          href="https://github.com/Nutlope/llamacoder"
+          href="https://github.com/LucasSantanaRM/llamacoder"
           className="group"
           aria-label="TaxPal on GitHub"
         >

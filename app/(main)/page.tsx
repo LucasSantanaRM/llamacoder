@@ -199,13 +199,13 @@ export default function Home() {
           target="_blank"
         >
           <span className="text-center">
-            Powered by <span className="font-medium">Llama 3.1</span> and{" "}
-            <span className="font-medium">Together AI</span>
+            Powered by <span className="font-medium">Ella 3.1</span> e{" "}
+            <span className="font-medium">LMS AI</span>
           </span>
         </a>
         <h1 className="my-6 max-w-3xl text-4xl font-bold text-gray-800 sm:text-6xl">
-          Turn your <span className="text-blue-600">idea</span>
-          <br /> into an <span className="text-blue-600">app</span>
+          Transforme sua <span className="text-blue-600">idéia</span>
+          <br /> em um <span className="text-blue-600">app</span>
         </h1>
 
         <form className="w-full max-w-xl" onSubmit={generateCode}>
@@ -218,7 +218,7 @@ export default function Home() {
                     required
                     name="prompt"
                     className="w-full rounded-l-3xl bg-transparent px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
-                    placeholder="Build me a calculator app..."
+                    placeholder="Crie um app de calculadora..."
                   />
                 </div>
                 <button
@@ -253,17 +253,17 @@ export default function Home() {
                       <Select.Viewport className="p-2">
                         {[
                           {
-                            label: "Llama 3.1 405B",
+                            label: "Ella 3.1 405B",
                             value:
                               "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
                           },
                           {
-                            label: "Llama 3.1 70B",
+                            label: "Ella 3.1 70B",
                             value:
                               "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
                           },
                           {
-                            label: "Gemma 2 27B",
+                            label: "Clovis 2 27B",
                             value: "google/gemma-2-27b-it",
                           },
                         ].map((model) => (
