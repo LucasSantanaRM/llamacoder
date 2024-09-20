@@ -192,7 +192,7 @@ export default function Home() {
           <img
             src="/artificial.png"
             alt="Artificial"
-            className="w-80 h-auto max-w-full"
+            className="w-[34%] h-auto max-w-full" // 35% da largura da tela
           />
         </div>
 
