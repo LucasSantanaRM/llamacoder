@@ -4,7 +4,6 @@ import CodeViewer from "@/components/code-viewer";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useScrollTo } from "@/hooks/use-scroll-to";
-import { domain } from "@/utils/domain";
 import { CheckIcon } from "@heroicons/react/16/solid";
 import { ArrowLongRightIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import { ArrowUpOnSquareIcon } from "@heroicons/react/24/outline";
@@ -33,7 +32,7 @@ export default function Home() {
   });
   let [ref, scrollTo] = useScrollTo();
   let [messages, setMessages] = useState<{ role: string; content: string }[]>(
-    [],
+    []
   );
   let [isPublishing, setIsPublishing] = useState(false);
 
@@ -73,7 +72,6 @@ export default function Home() {
       throw new Error(chatRes.statusText);
     }
 
-    // This data is a ReadableStream
     const data = chatRes.body;
     if (!data) {
       return;
@@ -90,7 +88,6 @@ export default function Home() {
       }
     };
 
-    // https://web.dev/streams/#the-getreader-and-read-methods
     const reader = data.getReader();
     const decoder = new TextDecoder();
     const parser = createParser(onParse);
@@ -141,7 +138,6 @@ export default function Home() {
       throw new Error(chatRes.statusText);
     }
 
-    // This data is a ReadableStream
     const data = chatRes.body;
     if (!data) {
       return;
@@ -158,7 +154,6 @@ export default function Home() {
       }
     };
 
-    // https://web.dev/streams/#the-getreader-and-read-methods
     const reader = data.getReader();
     const decoder = new TextDecoder();
     const parser = createParser(onParse);
@@ -193,13 +188,11 @@ export default function Home() {
       <Header />
 
       <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-20">
-
-        {/* Ajustando o posicionamento e o tamanho da imagem */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 pl-10">
           <img
             src="/artificial.png"
             alt="Artificial"
-            className="w-80 h-auto max-w-full" // Aumentando o tamanho para 320px de largura
+            className="w-80 h-auto max-w-full"
           />
         </div>
 
@@ -236,14 +229,15 @@ export default function Home() {
                   disabled={loading}
                   className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-blue-500 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? (
-                    <LoadingDots color="#000" />
-                  ) : (
-                    <ArrowLongRightIcon
-                      className="h-6 w-6 text-blue-500"
-                      aria-hidden="true"
-                    />
-                  )}
+                {loading ? (
+  <LoadingDots color="#000" style="small" /> // Ou "large", dependendo do que você quer
+) : (
+  <ArrowLongRightIcon
+    className="h-6 w-6 text-blue-500"
+    aria-hidden="true"
+  />
+)}
+
                 </button>
               </div>
             </div>
